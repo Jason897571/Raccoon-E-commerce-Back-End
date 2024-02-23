@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
   
 });
 
+// search by single id
 router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
@@ -33,6 +34,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// create category
 router.post('/', async (req, res) => {
   // create a new category
   try{
@@ -47,6 +49,8 @@ router.post('/', async (req, res) => {
   }
 });
 
+
+// update category
 router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   id_to_update = req.params.id;
@@ -62,6 +66,8 @@ router.put('/:id', async (req, res) => {
 
 });
 
+
+// delete category
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
   
